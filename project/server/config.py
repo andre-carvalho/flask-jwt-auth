@@ -16,14 +16,14 @@ class BaseConfig:
 
 class DevelopmentConfig(BaseConfig):
     """Development configuration."""
-    DEBUG = True
+    DEBUG = False
     BCRYPT_LOG_ROUNDS = 4
     SQLALCHEMY_DATABASE_URI = postgres_local_base + database_name
 
 
 class TestingConfig(BaseConfig):
     """Testing configuration."""
-    DEBUG = True
+    DEBUG = False
     TESTING = True
     BCRYPT_LOG_ROUNDS = 4
     SQLALCHEMY_DATABASE_URI = postgres_local_base + database_name + '_test'
